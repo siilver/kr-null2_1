@@ -28,7 +28,7 @@ window.addEventListener('load', function main1() {
   }
 // Функция проверки кооректности введенного числа
   function currentNumber(n) {
-    return ( !isNaN(parseInt(n, 10)) && isFinite(n) && isDec(n) && parseInt(n, 10) >= 5 && parseInt(n, 10) <= 15);
+    return ( !isNaN(parseInt(n, 10)) && isFinite(n) && isDec(n) && !((n + '').indexOf('.') > 0) && parseInt(n, 10) >= 5 && parseInt(n, 10) <= 15);
   }
 // Добавить слушателя на поле, чтоб еслинт не задрачивал
   function createField() {
